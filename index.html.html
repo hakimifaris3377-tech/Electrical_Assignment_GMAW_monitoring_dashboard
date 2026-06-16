@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GMAW Integrated Quality Monitoring Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-family: 'Inter', sans-serif;
+        }
+        .heading-font { font-family: 'Poppins', sans-serif; }
+        .premium-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 20px -2px rgba(148, 163, 184, 0.08);
+        }
+    </style>
+</head>
+<body class="p-4 lg:p-8 antialiased">
+
+    <header class="max-w-7xl mx-auto mb-10 p-6 md:p-8 bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+            <h1 class="heading-font text-2xl font-bold text-slate-900">GMAW Real-Time Quality Monitoring System</h1>
+            <p class="text-xs font-semibold text-blue-600 uppercase tracking-widest mt-1">Course: BMIK 2124 | Electrical Welding Equipment</p>
+        </div>
+        <div class="text-center md:text-right border-t md:border-t-0 md:border-l border-slate-200 pt-4 md:pt-0 md:pl-6">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 block">Project Supervisor</span>
+            <span class="text-lg font-bold text-slate-800 heading-font block">Ts. Mohammad Khalid Bin Wahid</span>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto mb-10">
+        <h2 class="heading-font text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+            <span class="w-1.5 h-3 bg-blue-600 rounded-sm"></span> Quality Assurance Engineering Team
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="premium-card p-5 rounded-2xl text-center flex flex-col items-center">
+                <div class="w-24 h-24 mb-3 rounded-full overflow-hidden border border-slate-200 flex items-center justify-center bg-slate-50">
+                    <img src="Picture cs.png" alt="Che Syahmi" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-slate-900 text-xs">Che Syahmi Bin Che Mazlan</h3>
+                <p class="text-[10px] font-mono text-slate-500 mt-0.5">B142410146</p>
+                <span class="inline-block text-[9px] font-bold uppercase bg-blue-50 text-blue-600 px-2 py-0.5 rounded mt-2">Electrical Engineer</span>
+            </div>
+
+            <div class="premium-card p-5 rounded-2xl text-center flex flex-col items-center">
+                <div class="w-24 h-24 mb-3 rounded-full overflow-hidden border border-slate-200 flex items-center justify-center bg-slate-50">
+                    <img src="Picture eizaz.png" alt="Ahmad Eizaz" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-slate-900 text-xs">Ahmad Eizaz Haizal</h3>
+                <p class="text-[10px] font-mono text-slate-500 mt-0.5">B142410145</p>
+                <span class="inline-block text-[9px] font-bold uppercase bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded mt-2">Thermal Analyst</span>
+            </div>
+
+            <div class="premium-card p-5 rounded-2xl text-center flex flex-col items-center">
+                <div class="w-24 h-24 mb-3 rounded-full overflow-hidden border border-slate-200 flex items-center justify-center bg-slate-50">
+                    <img src="Picture faris.png" alt="Muhammad Faris" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-slate-900 text-xs">Muhammad Faris Hakimi</h3>
+                <p class="text-[10px] font-mono text-slate-500 mt-0.5">B142410147</p>
+                <span class="inline-block text-[9px] font-bold uppercase bg-amber-50 text-amber-600 px-2 py-0.5 rounded mt-2">Mechanical Analyst</span>
+            </div>
+
+            <div class="premium-card p-5 rounded-2xl text-center flex flex-col items-center">
+                <div class="w-24 h-24 mb-3 rounded-full overflow-hidden border border-slate-200 flex items-center justify-center bg-slate-50">
+                    <img src="Picture farihin.png" alt="Muhammad Farihin" class="w-full h-full object-cover">
+                </div>
+                <h3 class="font-bold text-slate-900 text-xs">Muhammad Farihin Bin Hamdan</h3>
+                <p class="text-[10px] font-mono text-slate-500 mt-0.5">B142410149</p>
+                <span class="inline-block text-[9px] font-bold uppercase bg-purple-50 text-purple-600 px-2 py-0.5 rounded mt-2">Dashboard Designer</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto mb-10">
+        <h2 class="heading-font text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+            <span class="w-1.5 h-3 bg-emerald-600 rounded-sm"></span> Industrial Diagnostic Equipment & Sensors
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="premium-card p-4 rounded-2xl text-center bg-white flex flex-col justify-between">
+                <div class="w-full h-28 bg-slate-50 border border-slate-200 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img src="clamp meter1.png" alt="Clamp Meter" class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300">
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs uppercase text-blue-600 mb-1">01 / Clamp Meter</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed text-left">Measures welding current (A) and arc voltage (V) non-intrusively during active arc state for power computations.</p>
+                </div>
+            </div>
+
+            <div class="premium-card p-4 rounded-2xl text-center bg-white flex flex-col justify-between">
+                <div class="w-full h-28 bg-slate-50 border border-slate-200 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img src="1611562592b651f95e3e7ad3cb4cfe440036a00083.png" alt="Thermal Camera" class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300">
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs uppercase text-emerald-600 mb-1">02 / Thermal Camera</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed text-left">Captures infrared radiation to map surface temperatures of the weld pool and Heat Affected Zone (HAZ) at ε=0.95.</p>
+                </div>
+            </div>
+
+            <div class="premium-card p-4 rounded-2xl text-center bg-white flex flex-col justify-between">
+                <div class="w-full h-28 bg-slate-50 border border-slate-200 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img src="Wave-wtc-2-scaled.jpg.webp" alt="Arc Welding Analyzer" class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300">
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs uppercase text-amber-600 mb-1">03 / Arc Welding Analyzer</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed text-left">Detects dynamic physical reaction loads (N) resulting from expanding base metal under intense arc constraints.</p>
+                </div>
+            </div>
+
+            <div class="premium-card p-4 rounded-2xl text-center bg-white flex flex-col justify-between">
+                <div class="w-full h-28 bg-slate-50 border border-slate-200 rounded-xl mb-3 flex items-center justify-center overflow-hidden">
+                    <img src="20251224114846184.jpg" alt="LVDT Sensor" class="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300">
+                </div>
+                <div>
+                    <h4 class="font-bold text-xs uppercase text-purple-600 mb-1">04 / LVDT Sensor</h4>
+                    <p class="text-[11px] text-slate-500 leading-relaxed text-left">Tracks sub-micron linear displacement (mm) to verify final structural geometric shrinkage distortions after cooling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto space-y-10">
+        
+        <section class="space-y-4">
+            <h2 class="heading-font text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                <span class="w-1.5 h-3 bg-blue-600 rounded-sm"></span> Topic 1: Electrical Analytical Scatter Diagrams
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="heading-font text-xs font-bold text-slate-700 text-center mb-3">Plot A: Current (A) vs Voltage (V)</h3>
+                    <div class="h-64"><canvas id="canvasPlotA"></canvas></div>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="heading-font text-xs font-bold text-slate-700 text-center mb-3">Plot B: Current (A) vs Power (W)</h3>
+                    <div class="h-64"><canvas id="canvasPlotB"></canvas></div>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="heading-font text-xs font-bold text-slate-700 text-center mb-3">Plot C: Current (A) vs Heat Input (kJ/mm)</h3>
+                    <div class="h-64"><canvas id="canvasPlotC"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="heading-font text-sm font-bold text-slate-800 mb-4 uppercase">Table 1: 30 Samples Electrical Measurement Parameters</h3>
+            <div class="overflow-x-auto max-h-80">
+                <table class="min-w-full divide-y divide-slate-200 text-xs text-left">
+                    <thead class="bg-slate-50 sticky top-0 font-bold text-slate-600 z-10">
+                        <tr>
+                            <th class="px-4 py-3">Sample No</th>
+                            <th class="px-4 py-3">Current (A)</th>
+                            <th class="px-4 py-3">Voltage (V)</th>
+                            <th class="px-4 py-3">Power (W)</th>
+                            <th class="px-4 py-3">Heat Input (kJ/mm)</th>
+                            <th class="px-4 py-3">Resistance (Ω)</th>
+                            <th class="px-4 py-3">Voltage Drop (V)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table1Rows" class="divide-y divide-slate-200 text-slate-600 bg-white"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <h2 class="heading-font text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                <span class="w-1.5 h-3 bg-emerald-600 rounded-sm"></span> Topic 2: Statistical Process Control (SPC) Charts
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="heading-font text-xs font-bold text-slate-800 mb-4 uppercase">X-Bar Chart (&macr;X) with Control Limits</h3>
+                    <div class="h-64"><canvas id="canvasXbar"></canvas></div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="heading-font text-xs font-bold text-slate-800 mb-4 uppercase">R-Chart (Range Variation) Control Limits</h3>
+                    <div class="h-64"><canvas id="canvasRbar"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <h2 class="heading-font text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                <span class="w-1.5 h-3 bg-amber-600 rounded-sm"></span> Topic 3: Load & Displacement Mechanical Analysis
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm lg:col-span-1">
+                    <h3 class="heading-font text-xs font-bold text-slate-800 mb-4 uppercase">Table 3: Mechanical Transducer Profiles</h3>
+                    <table class="min-w-full divide-y divide-slate-200 text-xs text-left">
+                        <thead class="bg-slate-50 font-bold text-slate-600">
+                            <tr>
+                                <th class="px-3 py-2">Measurement Stage</th>
+                                <th class="px-3 py-2">Load (N)</th>
+                                <th class="px-3 py-2">Displacement (mm)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-slate-600 bg-white">
+                            <tr><td class="px-3 py-2 font-medium">Arc Start</td><td class="px-3 py-2">125</td><td class="px-3 py-2">0.02</td></tr>
+                            <tr><td class="px-3 py-2 font-medium">5 seconds</td><td class="px-3 py-2">142</td><td class="px-3 py-2">0.15</td></tr>
+                            <tr><td class="px-3 py-2 font-medium">10 seconds</td><td class="px-3 py-2">138</td><td class="px-3 py-2">0.38</td></tr>
+                            <tr><td class="px-3 py-2 font-medium text-blue-600">15 seconds (Peak)</td><td class="px-3 py-2 font-semibold">145</td><td class="px-3 py-2">0.62</td></tr>
+                            <tr><td class="px-3 py-2 font-medium">20 seconds</td><td class="px-3 py-2">140</td><td class="px-3 py-2">0.85</td></tr>
+                            <tr><td class="px-3 py-2 font-medium">Arc Stop</td><td class="px-3 py-2">135</td><td class="px-3 py-2">1.02</td></tr>
+                            <tr class="bg-blue-50/50"><td class="px-3 py-2 font-bold text-blue-700">Fully Cooled (60s)</td><td class="px-3 py-2 text-slate-400">N/A</td><td class="px-3 py-2 font-bold text-blue-700">0.48</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm lg:col-span-2">
+                    <h3 class="heading-font text-xs font-bold text-slate-800 mb-4 uppercase">Dynamic Clamping Force & Structural Contraction Profile</h3>
+                    <div class="h-64"><canvas id="canvasMechanical"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <h3 class="heading-font text-sm font-bold text-slate-800 mb-4 uppercase">Fault Diagnostics Matrix</h3>
+            <div class="overflow-x-auto text-xs">
+                <table class="min-w-full divide-y divide-slate-200 text-left">
+                    <thead class="bg-slate-50 font-bold text-slate-600">
+                        <tr>
+                            <th class="px-4 py-3">Identified Symptom / Out-of-Control Defect</th>
+                            <th class="px-4 py-3">Probable Root Cause</th>
+                            <th class="px-4 py-3">Recommended Engineering Correction</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-slate-700 bg-white">
+                        <tr>
+                            <td class="px-4 py-4 font-semibold text-red-600 bg-red-50/40">Thermal Process Instability (22 Points Beyond Bounds)</td>
+                            <td class="px-4 py-4">Inconsistent manual torch travel speeds and manual joint tracing variations.</td>
+                            <td class="px-4 py-4">Deploy an <strong>Automated Travel Speed Tractor</strong> fixed at 160 mm/min to stabilize heat input.</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-4 font-semibold text-amber-600 bg-amber-50/40">0.48 mm Locked Permanent Structural Distortion</td>
+                            <td class="px-4 py-4">Concentrated transient shrinkage cooling stresses constrained inside the HAZ weldment.</td>
+                            <td class="px-4 py-4">Perform mandatory <strong>Post-Weld Heat Treatment (PWHT)</strong> or stress relief fixtures.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="max-w-7xl mx-auto mt-12 py-6 border-t border-slate-200 text-center text-[10px] uppercase font-bold tracking-widest text-slate-400">
+        <p>© 2026 UTeM - Faculty of Manufacturing Engineering | BMIK 2124 Platform</p>
+    </footer>
+
+    <script>
+        const table1Data = [
+            [1, 185.2, 24.8, 4592.96, 1.722, 0.134, 50.72], [2, 192.6, 25.1, 4834.26, 1.813, 0.130, 50.42],
+            [3, 178.4, 24.2, 4317.28, 1.619, 0.136, 51.32], [4, 205.8, 25.9, 5330.22, 1.999, 0.126, 49.62],
+            [5, 168.3, 23.7, 3988.71, 1.496, 0.141, 51.82], [6, 195.2, 25.3, 4938.56, 1.852, 0.130, 50.22],
+            [7, 210.4, 26.1, 5491.44, 2.059, 0.124, 49.42], [8, 182.7, 24.5, 4476.15, 1.679, 0.134, 51.02],
+            [9, 220.1, 26.7, 5876.67, 2.204, 0.121, 48.82], [10, 188.5, 24.7, 4655.95, 1.746, 0.131, 50.82],
+            [11, 215.3, 26.5, 5705.45, 2.140, 0.123, 49.02], [12, 175.2, 23.9, 4187.28, 1.570, 0.136, 51.62],
+            [13, 200.6, 25.6, 5135.36, 1.926, 0.128, 49.92], [14, 165.8, 23.4, 3879.72, 1.455, 0.141, 52.12],
+            [15, 225.4, 27.0, 6085.80, 2.282, 0.120, 48.52], [16, 212.5, 26.3, 5588.75, 2.096, 0.124, 49.22],
+            [17, 198.3, 25.4, 5036.82, 1.889, 0.128, 50.12], [18, 225.7, 27.1, 6116.47, 2.294, 0.120, 48.42],
+            [19, 189.6, 24.9, 4721.04, 1.770, 0.131, 50.62], [20, 235.2, 28.0, 6585.60, 2.470, 0.119, 47.52],
+            [21, 175.8, 24.0, 4219.20, 1.582, 0.137, 51.52], [22, 220.4, 26.8, 5906.72, 2.215, 0.122, 48.72],
+            [23, 195.5, 25.3, 4946.15, 1.855, 0.129, 50.22], [24, 208.9, 26.0, 5431.40, 2.037, 0.124, 49.52],
+            [25, 170.2, 23.8, 4050.76, 1.519, 0.140, 51.72], [26, 230.8, 27.5, 6347.00, 2.380, 0.119, 48.02],
+            [27, 185.9, 24.8, 4610.32, 1.729, 0.133, 50.72], [28, 218.3, 26.6, 5806.78, 2.178, 0.122, 48.92],
+            [29, 195.0, 25.2, 4914.00, 1.843, 0.129, 50.32], [30, 210.1, 26.2, 5504.62, 2.064, 0.125, 49.32]
+        ];
+
+        const xbarValues = [486.25, 511.00, 470.25, 534.25, 449.37, 498.92, 520.32, 476.25, 506.25, 461.78, 527.62, 491.75, 517.63, 457.58, 509.90, 482.52, 533.12, 467.60, 502.62, 541.78, 477.60, 520.10, 452.55, 497.62, 530.10];
+        const rValues = [13.5, 9.4, 9.5, 11.5, 6.5, 6.5, 9.3, 7.4, 7.9, 6.4, 9.5, 6.6, 9.7, 9.3, 8.7, 8.5, 9.8, 10.2, 9.1, 7.6, 9.3, 8.7, 7.7, 9.3, 8.7];
+
+        const uclX = 502.02, clX = 495.45, lclX = 493.58;
+        const uclR = 17.27, clR = 8.62, lclR = 0.26;
+
+        window.onload = function() {
+            // Render Table 1
+            const tbody = document.getElementById('table1Rows');
+            table1Data.forEach(r => {
+                tbody.innerHTML += `<tr>
+                    <td class="px-4 py-2 border-b border-slate-100 font-bold">#${r[0]}</td>
+                    <td class="px-4 py-2 border-b border-slate-100">${r[1]}</td>
+                    <td class="px-4 py-2 border-b border-slate-100">${r[2]}</td>
+                    <td class="px-4 py-2 border-b border-slate-100 font-medium">${r[3]}</td>
+                    <td class="px-4 py-2 border-b border-slate-100 text-blue-600 font-semibold">${r[4]}</td>
+                    <td class="px-4 py-2 border-b border-slate-100">${r[5]}</td>
+                    <td class="px-4 py-2 border-b border-slate-100">${r[6]}</td>
+                </tr>`;
+            });
+
+            // Plot A
+            new Chart(document.getElementById('canvasPlotA').getContext('2d'), {
+                type: 'scatter',
+                data: { datasets: [{ label: 'Data Points', data: table1Data.map(r => ({x: r[1], y: r[2]})), backgroundColor: '#2563eb' }] },
+                options: { responsive: true, maintainAspectRatio: false, scales: { x: {title: {display: true, text: 'Current (A)'}}, y: {title: {display: true, text: 'Voltage (V)'}} } }
+            });
+
+            // Plot B
+            new Chart(document.getElementById('canvasPlotB').getContext('2d'), {
+                type: 'scatter',
+                data: { datasets: [{ label: 'Data Points', data: table1Data.map(r => ({x: r[1], y: r[3]})), backgroundColor: '#ea580c' }] },
+                options: { responsive: true, maintainAspectRatio: false, scales: { x: {title: {display: true, text: 'Current (A)'}}, y: {title: {display: true, text: 'Power (W)'}} } }
+            });
+
+            // Plot C
+            new Chart(document.getElementById('canvasPlotC').getContext('2d'), {
+                type: 'scatter',
+                data: { datasets: [{ label: 'Data Points', data: table1Data.map(r => ({x: r[1], y: r[4]})), backgroundColor: '#16a34a' }] },
+                options: { responsive: true, maintainAspectRatio: false, scales: { x: {title: {display: true, text: 'Current (A)'}}, y: {title: {display: true, text: 'Heat Input (kJ/mm)'}} } }
+            });
+
+            // X-bar Line Custom Boundaries
+            new Chart(document.getElementById('canvasXbar').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: Array.from({length: 25}, (_, i) => i+1),
+                    datasets: [
+                        { label: 'Sample Mean', data: xbarValues, borderColor: '#0f172a', pointBackgroundColor: xbarValues.map(v => (v > uclX || v < lclX) ? '#ef4444' : '#2563eb'), borderWidth: 2, fill: false },
+                        { label: 'UCL', data: Array(25).fill(uclX), borderColor: '#ef4444', borderDash: [5, 5], pointRadius: 0, fill: false },
+                        { label: 'CL', data: Array(25).fill(clX), borderColor: '#16a34a', pointRadius: 0, fill: false },
+                        { label: 'LCL', data: Array(25).fill(lclX), borderColor: '#ef4444', borderDash: [5, 5], pointRadius: 0, fill: false }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            // R Chart Control Limits
+            new Chart(document.getElementById('canvasRbar').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: Array.from({length: 25}, (_, i) => i+1),
+                    datasets: [
+                        { label: 'Sample Range', data: rValues, borderColor: '#ca8a04', borderWidth: 2, fill: false },
+                        { label: 'UCL', data: Array(25).fill(uclR), borderColor: '#ef4444', borderDash: [5, 5], pointRadius: 0, fill: false },
+                        { label: 'CL', data: Array(25).fill(clR), borderColor: '#16a34a', pointRadius: 0, fill: false }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false }
+            });
+
+            // Topic 3 Dual Axis Mechanical Chart
+            new Chart(document.getElementById('canvasMechanical').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['Arc Start', '5s', '10s', '15s (Peak)', '20s', 'Arc Stop', 'Cooled (60s)'],
+                    datasets: [
+                        { label: 'Load (N) - Arc Analyzer', data: [125, 142, 138, 145, 140, 135, null], borderColor: '#ca8a04', backgroundColor: 'transparent', yAxisID: 'yLoad', tension: 0.2 },
+                        { label: 'Displacement (mm) - LVDT', data: [0.02, 0.15, 0.38, 0.62, 0.85, 1.02, 0.48], borderColor: '#7c3aed', backgroundColor: 'transparent', yAxisID: 'yDisp', tension: 0.2 }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        yLoad: { type: 'linear', position: 'left', title: { display: true, text: 'Force / Load (N)' } },
+                        yDisp: { type: 'linear', position: 'right', title: { display: true, text: 'Linear Displacement (mm)' }, grid: { drawOnChartArea: false } }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
